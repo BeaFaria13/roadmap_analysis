@@ -231,7 +231,7 @@ def average_per_transformation(df,company,participants):
     mean_per_transf=[]
     for t in transf:
         selection=df.query("Empresa==@company and Transformação==@t and Colaborador==@participants")
-        mean=round(selection['Pontuação'].mean(),2)
+        mean=round(selection['Pontuação'].mean(),1)
         mean_per_transf.append(mean)
 
     difference=[]
